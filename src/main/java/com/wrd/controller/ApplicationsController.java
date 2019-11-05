@@ -21,7 +21,7 @@ import com.wrd.service.ApplicationService;
 
 @RestController
 @RequestMapping("/dashboard")
-public class ApplicationController {
+public class ApplicationsController {
 	
 	@Autowired private ApplicationService dashboardService;
 	

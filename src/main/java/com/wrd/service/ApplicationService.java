@@ -30,8 +30,8 @@ public class ApplicationService {
 	}
 
 	public Application getApplicationById(long id) throws NotFoundException {
-		Optional<Application> optionalDog = dashboardRepository.findById(id);
-		return optionalDog.orElseThrow(() -> new NotFoundException("Couldn't find a Application with id: " + id));
+		Optional<Application> optional = dashboardRepository.findById(id);
+		return optional.orElseThrow(() -> new NotFoundException("Couldn't find a Application with id: " + id));
 	}
 	
 	public Application updateApplication(Application application) {

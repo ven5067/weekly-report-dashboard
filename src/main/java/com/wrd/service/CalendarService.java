@@ -29,8 +29,8 @@ public class CalendarService {
 	}
 
 	public Calendar getCalendarById(long id) throws NotFoundException {
-		Optional<Calendar> optionalDog = calendarRepository.findById(id);
-		return optionalDog.orElseThrow(() -> new NotFoundException("Couldn't find a Calendar with id: " + id));
+		Optional<Calendar> optional = calendarRepository.findById(id);
+		return optional.orElseThrow(() -> new NotFoundException("Couldn't find a Calendar with id: " + id));
 	}
 	
 	public Calendar updateCalendar(Calendar calendar) {
