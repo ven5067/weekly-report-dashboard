@@ -39,7 +39,8 @@ public class AchievementService {
 	
 	private Achievement toEntity(AchievementDto achievementDto) {
 		Achievement entity = new Achievement();
-		entity.setAchievement(entity.getAchievement());
+		entity.setAchievement(achievementDto.getAchievement());
+
 		return entity;
 	}
 

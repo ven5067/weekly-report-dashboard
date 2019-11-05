@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wrd.dto.AchievementDto;
-import com.wrd.dto.ObservationDto;
 import com.wrd.entity.Achievement;
-import com.wrd.entity.Observation;
 import com.wrd.entity.exception.NotFoundException;
 import com.wrd.service.AchievementService;
 
@@ -34,13 +32,13 @@ public class AchievementsContoller {
 	}
 
 	@PostMapping("/achievement")
-	public ResponseEntity<Void> postObservation(@RequestBody AchievementDto achievementDto) {
+	public ResponseEntity<Void> postAchievement(@RequestBody AchievementDto achievementDto) {
 		achievementService.add(achievementDto);
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}
 
 	@PutMapping("/achievement")
-	public ResponseEntity<Achievement> updateObservation(@RequestBody Achievement achievement) {
+	public ResponseEntity<Achievement> updateAchievement(@RequestBody Achievement achievement) {
 		return new ResponseEntity<Achievement>(achievementService.updateAchievement(achievement), HttpStatus.OK);
 	}
 
